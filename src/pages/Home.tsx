@@ -11,25 +11,25 @@ const App: React.FC = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden">
-      {clouds.map((cloud, index) => (
-        <img
-          key={index}
-          src={Cloud}
-          alt="Cloud"
-          className={tw(
-            "absolute opacity-70",
-            cloud.top ? `top-${cloud.top}` : "",
-            cloud.bottom ? `bottom-${cloud.bottom}` : "",
-            cloud.left ? `left-${cloud.left}` : "",
-            cloud.right ? `right-${cloud.right}` : "",
-            `w-${cloud.width}`
-          )}
-        />
-      ))}
-      <div className="text-center z-10">
-        <div className="text-4xl text-sky-600 mb-4">
-          <img src={Logo} alt="Logo" />
-        </div>
+      <div className="clouds">
+        {clouds.map((cloud, index) => (
+          <img
+            key={index}
+            src={Cloud}
+            alt={"cloud" + "-" + (index + 1)}
+            className={tw(
+              "absolute opacity-70",
+              cloud.top ? `top-${cloud.top}` : "",
+              cloud.bottom ? `bottom-${cloud.bottom}` : "",
+              cloud.left ? `left-${cloud.left}` : "",
+              cloud.right ? `right-${cloud.right}` : "",
+              `w-${cloud.width}`
+            )}
+          />
+        ))}
+      </div>
+      <div className="text-center flex items-center justify-center flex-col z-10">
+        <img src={Logo} alt="Logo" />
         <h1 className="text-4xl md:text-5xl text-black mb-2">
           Create Your Resume
         </h1>
