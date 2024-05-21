@@ -1,14 +1,13 @@
-import PWABadge from './PWABadge.tsx'
-import './App.css'
+import PWABadge from "./PWABadge.tsx";
+import AppRoutes from "./routes/routes.tsx";
 
 function App() {
-
   return (
     <>
-      <h1 className="text-3xl font-bold underline">cv-maker</h1>
+      <AppRoutes />
       <PWABadge />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
