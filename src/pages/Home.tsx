@@ -5,7 +5,7 @@ import Button from "../components/common/Button";
 import { useNavigate } from "react-router-dom";
 import { tw } from "twind";
 import { clouds } from "../mocks/clouds";
-
+import ReactParallaxTilt from "react-parallax-tilt";
 const App: React.FC = () => {
   const navigate = useNavigate();
 
@@ -29,8 +29,10 @@ const App: React.FC = () => {
         ))}
       </div>
       <div className="text-center flex items-center justify-center flex-col z-10">
-        <img src={Logo} alt="Logo" />
-        <h1 className="text-4xl md:text-5xl text-black mb-2">
+        <ReactParallaxTilt>
+          <img src={Logo} alt="Logo" />
+        </ReactParallaxTilt>
+        <h1 className="text-4xl md:text-5xl font-medium text-black mb-2">
           Create Your Resume
         </h1>
         <p className="text-lg text-black mb-6">
