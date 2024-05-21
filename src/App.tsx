@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1>cv-maker</h1>
+      <h1 className="text-3xl font-bold underline">cv-maker</h1>
       <PWABadge />
     </>
   )
