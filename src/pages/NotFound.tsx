@@ -1,4 +1,4 @@
-const NotFound = () => {
+const NotFound: React.FC = () => {
   return (
     <section className="flex items-center justify-center h-screen w-full p-16 bg-gray-50 dark:bg-gray-700">
       <div className="container flex flex-col items-center ">
