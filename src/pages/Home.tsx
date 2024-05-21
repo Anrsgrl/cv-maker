@@ -3,6 +3,7 @@ import Cloud from "../assets/cloud.svg";
 import Logo from "../assets/3d.png";
 import Button from "../components/common/Button";
 import { useNavigate } from "react-router-dom";
+import { tw } from "twind";
 import { clouds } from "../mocks/clouds";
 
 const App: React.FC = () => {
@@ -15,13 +16,14 @@ const App: React.FC = () => {
           key={index}
           src={Cloud}
           alt="Cloud"
-          className={`absolute opacity-70 ${
-            cloud.top ? `top-${cloud.top}` : ""
-          } ${cloud.bottom ? `bottom-${cloud.bottom}` : ""} ${
-            cloud.left ? `left-${cloud.left}` : ""
-          } ${cloud.right ? `right-${cloud.right}` : ""} w-${
-            cloud.width
-          } h-auto`}
+          className={tw(
+            "absolute opacity-70",
+            cloud.top ? `top-${cloud.top}` : "",
+            cloud.bottom ? `bottom-${cloud.bottom}` : "",
+            cloud.left ? `left-${cloud.left}` : "",
+            cloud.right ? `right-${cloud.right}` : "",
+            `w-${cloud.width}`
+          )}
         />
       ))}
       <div className="text-center z-10">
